@@ -3,44 +3,47 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>    <artifactId>mnist-dnn</artifactId> <version>1.0-SNAPSHOT</version>   <properties>
+    <groupId>com.example</groupId>
+    <artifactId>mnist-dnn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <dl4j.version>1.0.0-M2.1</dl4j.version>
     </properties>
 
-    <dependency>
-        <groupId>org.deeplearning4j</groupId>
-        <artifactId>deeplearning4j-core</artifactId>
-        <version>1.0.0-beta4</version>
-    </dependency>
+    <dependencies>
 
-    <dependency>
-    <groupId>org.deeplearning4j</groupId>
-    <artifactId>deeplearning4j-modelimport</artifactId>
-    <version>1.0.0-beta4</version>
-    </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
 
-    <dependency>
-        <groupId>org.nd4j</groupId>
-        <artifactId>nd4j-native-platform</artifactId>
-        <version>1.0.0-beta4</version>
-    </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
 
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.5</version>
-    </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-ui</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
 
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>1.6.4</version>
-    </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-modelimport</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
 
-    <dependency>
-    <groupId>org.deeplearning4j</groupId>
-    <artifactId>deeplearning4j-ui</artifactId>
-    <version>1.0.0-M2.1</version>
-    </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.11</version>
+        </dependency>
+
+    </dependencies>
 </project>
